@@ -3,7 +3,7 @@ const dotenv=require ("dotenv");
 dotenv.config({path: "./config.env"})
 require("./db/conn")
 const cors=require("cors");
-const port=6010
+const port= process.env.PORT||6010
 const app=express();
 const router=require("./Routes/Router")
 app.use(cors());
